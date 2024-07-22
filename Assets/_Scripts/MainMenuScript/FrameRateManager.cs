@@ -19,7 +19,7 @@ public class FrameRateManager : MonoBehaviour
             Application.targetFrameRate = 30;
         }
 
-        Debug.Log("Screen Refresh Rate: " + screenRefreshRate + " Hz");
-        Debug.Log("Target Frame Rate: " + Application.targetFrameRate + " FPS");
+        //Debug.Log("Screen Refresh Rate: " + screenRefreshRate + " Hz");
+        //Debug.Log("Target Frame Rate: " + Application.targetFrameRate + " FPS");
     }
 }
