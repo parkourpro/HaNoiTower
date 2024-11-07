@@ -45,6 +45,7 @@ public class GameController : MonoBehaviour
     private AudioSource audioSource; // Nguồn phát âm thanh
 
     public Material donutMaterial;
+    public LoadingBar loadingBar;
 
     void Awake()
     {
@@ -229,26 +230,21 @@ public class GameController : MonoBehaviour
         if (CheckWin())
         {
             //Debug.Log("You win");
+            LoadingBar.TogglePauseResume();
             gameUIController.pauseButton.interactable = false;
             gameUIController.ShowWinPopup();
             PlayWinSound();
-
+            SaveManager.SaveGameData(loadingBar.GetInfoWinLevel());
+            if (GameSettings.numberOfDisks == GameSettings.unlockedLevel)
+            {
+                GameSettings.UnlockNewLevel(GameSettings.unlockedLevel + 1);
+            }
         }
     }
 
     Stack<Transform> GetTower(int tower)
     {
-        //switch (tower)
-        //{
-        //    case 1:
-        //        return towerA;
-        //    case 2:
-        //        return towerB;
-        //    case 3:
-        //        return towerC;
-        //    default:
-        //        return null;
-        //}
+
         return tower switch
         {
             1 => towerA,
@@ -260,17 +256,7 @@ public class GameController : MonoBehaviour
 
     Transform GetTowerPosition(int tower)
     {
-        //switch (tower)
-        //{
-        //    case 1:
-        //        return towerAPosition;
-        //    case 2:
-        //        return towerBPosition;
-        //    case 3:
-        //        return towerCPosition;
-        //    default:
-        //        return null;
-        //}
+
         return tower switch
         {
             1 => towerAPosition,

@@ -7,7 +7,7 @@ public class CanvasController : MonoBehaviour
 {
     public Button startButton;
     public Button instructionButton;
-    public Button exitButton;
+    public Button resetButton;
 
     public GameObject howToPlayPanel;
     public Button howToPlayButton;
@@ -19,7 +19,7 @@ public class CanvasController : MonoBehaviour
         howToPlayPanel.SetActive(false);
         startButton.onClick.AddListener(OnStartButtonClick);
         instructionButton.onClick.AddListener(OnInstructionButtonClick);
-        exitButton.onClick.AddListener(OnExitButtonClick);
+        resetButton.onClick.AddListener(OnResetButtonClick);
         howToPlayButton.onClick.AddListener(OnHowToPlayButtonClick);
         closeHowToPlayPanel.onClick.AddListener(OnCloseHowToPlayPanelClick);
 
@@ -29,16 +29,17 @@ public class CanvasController : MonoBehaviour
 
     public void OnStartButtonClick()
     {
-        SceneManager.LoadScene("SelectDisks");
+        SceneManager.LoadScene("ChooseLevelScreen");
     }
     public void OnInstructionButtonClick()
     {
         SceneManager.LoadScene("InstructionScene");
     }
 
-    public void OnExitButtonClick()
+    public void OnResetButtonClick()
     {
-        Application.Quit();
+        PlayerPrefs.DeleteKey("UnlockedLevel");
+        SaveManager.DeleteAllGameData();
     }
 
     public void OnHowToPlayButtonClick()

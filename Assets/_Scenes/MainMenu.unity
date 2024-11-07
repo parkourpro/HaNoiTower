@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -470,10 +470,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 498900098}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 995.4, y: 424.3}
-  m_SizeDelta: {x: 130, y: 130}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -63.599976, y: -62.200012}
+  m_SizeDelta: {x: 130, y: 129}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &252114064
 MonoBehaviour:
@@ -1091,7 +1091,7 @@ GameObject:
   - component: {fileID: 1042658658}
   - component: {fileID: 1042658657}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: Reset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1713,7 +1713,7 @@ GameObject:
   - component: {fileID: 1528322919}
   - component: {fileID: 1528322923}
   m_Layer: 5
-  m_Name: MainMenuCanvas
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1820,7 +1820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: {fileID: 230416585}
   instructionButton: {fileID: 1545835307}
-  exitButton: {fileID: 1042658654}
+  resetButton: {fileID: 1042658654}
   howToPlayPanel: {fileID: 498900097}
   howToPlayButton: {fileID: 1122724803}
   closeHowToPlayPanel: {fileID: 252114064}
@@ -2230,7 +2230,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: Reset
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a8c2afcae975d194c8917e3da76c4ccf, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: a8c2afcae975d194c8917e3da76c4ccf, type: 2}

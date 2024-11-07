@@ -8,8 +8,9 @@ using UnityEngine.UI;
 public class SelectDiskController : MonoBehaviour
 {
     public TextMeshProUGUI diskCountText;
-    public Button increaseButton;
-    public Button decreaseButton;
+    //public Button increaseButton;
+    //public Button decreaseButton;
+    //public Button playButton;
 
     private int diskCount = 3;
     private int minDiskCount = GameSettings.minDiskCount;

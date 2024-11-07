@@ -36,12 +36,15 @@ public class GameUIController : MonoBehaviour
         //Debug.Log("pause button clicked");
         pausePanel.SetActive(true);
         pauseButton.interactable = false;
+        LoadingBar.TogglePauseResume();
     }
 
     private void OnResumeButtonClick()
     {
         pausePanel.SetActive(false);
         pauseButton.interactable = true;
+        LoadingBar.TogglePauseResume();
+
     }
 
     private void OnHomeButtonClick()
@@ -56,6 +59,6 @@ public class GameUIController : MonoBehaviour
 
     private void OnMainMenuButtonClick()
     {
-        SceneManager.LoadScene("SelectDisks");
+        SceneManager.LoadScene("ChooseLevelScreen");
     }
 }
